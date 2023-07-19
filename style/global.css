@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+.home-post-card {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.blog-post-card {
+    gap: 20px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.blog-post-card > .left {
+    width: 65%;
+}
+
+.left {
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.right {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.post-card {
+    width: 300px;
+    height: 300px;
+}
+
+.right-card {
+    width: 100%;
+    height: 300px;
+    padding: 10px;
+    background: #16181a;
+    border-radius: 14px;
+}
+
+.right-card:last-child {
+    top: 90px;
+    position: sticky;
+    position: -webkit-sticky;
+}
+
+@media screen and (max-width: 980px) {
+    .right {
+        display: none;
+    }
+    .left {
+        width: 100%;
+        justify-content: center;
+    }
+    .blog-post-card > .left {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 660px) {
+    .post-card {
+        width: 100%;
+    }
+}
+
+.hide-after-2-lines {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
